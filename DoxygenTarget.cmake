@@ -10,7 +10,7 @@ macro (ADD_DOXYGEN_TARGET Target)
   
   add_custom_command(
     OUTPUT ${PROJECT_BINARY_DIR}/${CMAKE_DOXYGEN_OUT}/doxygen.stamp  # Was ${PROJECT_BINARY_DIR}/${CMAKE_DOXYGEN_OUT}/html/index.html
-    COMMAND ${DOXYGEN_EXECUTABLE} -b ${PROJECT_BINARY_DIR}/Doxyfile
+    COMMAND ${DOXYGEN_EXECUTABLE} -b ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile
     COMMAND ${CMAKE_COMMAND} -E touch ${PROJECT_BINARY_DIR}/${CMAKE_DOXYGEN_OUT}/doxygen.stamp
     DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile # Was empty
     COMMENT "Generating API documentation with Doxygen" VERBATIM)
