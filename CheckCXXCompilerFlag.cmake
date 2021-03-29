@@ -15,3 +15,7 @@ endfunction()
 #enable_cxx_compiler_flag_if_supported("-Wall")
 #enable_cxx_compiler_flag_if_supported("-Wextra")
 #enable_cxx_compiler_flag_if_supported("-pedantic")
+
+#CMake 3.20
+#add_compile_options(/W4 /WX)
+#add_compile_definitions()
